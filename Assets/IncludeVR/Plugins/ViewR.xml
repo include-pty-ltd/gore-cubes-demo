@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ViewR</name>
+    </assembly>
+    <members>
+        <member name="M:Include.Input.GetTouches">
+            <summary>
+            Gets all touches which are active at the beginning of this frame
+            </summary>
+            <returns>Dictionary of (Dictionary of Touches keyed with touchIds) keyed with deviceIds</returns>
+        </member>
+        <member name="M:Include.Input.GetTouches(System.Int32)">
+            <summary>
+            Gets all clients which have specified touchId active at the beginning of this frame
+            </summary>
+            <param name="touchId"></param>
+            <returns>Dictionary of touches, keyed with deviceIds</returns>
+        </member>
+        <member name="M:Include.Input.GetTouches(System.String)">
+            <summary>
+            Gets all touches of the specified clientId which are active at the beginning of this frame
+            </summary>
+            <param name="deviceId"></param>
+            <returns>Dictionary of Touches keyed with touchIds</returns>
+        </member>
+        <member name="M:Include.Input.GetTouches(System.String,System.Int32)">
+            <summary>
+            Gets the specified touch of the specified client if it is active at the beginning of this frame
+            </summary>
+            <param name="deviceId"></param>
+            <param name="touchId"></param>
+            <returns>Touch if found, else null</returns>
+        </member>
+        <member name="M:Include.Input.GetTouchers(UnityEngine.GameObject)">
+            <summary>
+             Gets information on which clients are touching this GameObject at the beginning of this frame
+            </summary>
+            <param name="gameObject">Object ID of object concerned</param>
+            <returns>Dictionary of clientsIds and touchIds which are touching the object</returns>
+        </member>
+        <member name="M:Include.Input.GetTouchers(System.Int32)">
+            <summary>
+             Gets information on which clients are touching this objectId at the beginning of this frame
+            </summary>
+            <param name="objectId">Object ID of object concerned</param>
+            <returns>Dictionary of clientsIds and their pointer indexes which are touching the object at the beginning of this frame</returns>
+        </member>
+        <member name="M:Include.Input.IsTouchedBy(UnityEngine.GameObject,UnityEngine.GameObject)">
+            <summary>
+            Gets whether or not specified object was touched by specified device
+            </summary>
+        </member>
+        <member name="M:Include.Input.IsTouchedBy(UnityEngine.GameObject,System.String)">
+            <summary>
+            Gets whether or not specified object was touched by specified device
+            </summary>
+        </member>
+        <member name="M:Include.Input.IsTouchedBy(System.Int32,UnityEngine.GameObject)">
+            <summary>
+            Gets whether or not specified object was touched by specified device
+            </summary>
+        </member>
+        <member name="M:Include.Input.IsTouchedBy(System.Int32,System.String)">
+            <summary>
+            Gets whether or not specified object was touched by specified device
+            </summary>
+        </member>
+        <member name="M:Include.Input.IsTouched(UnityEngine.GameObject)">
+            <summary>
+            Gets if gameObject is being touched at the beginning of this frame (note: this is slower than using IsTouched(int objectId);)
+            </summary>
+            <param name="gameObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Include.Input.IsTouched(System.Int32)">
+            <summary>
+            Gets if objectId is being touched at the beginning of this frame
+            </summary>
+            <param name="objectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Include.Input.OnTouch(System.Object,Include.VR.Viewer.Networking.DeviceTouchArgs)">
+            <summary>
+            This is for incoming touch messages from the Looking Glass Phone Client
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Include.Input.RegisterDevice(System.String,Include.DeviceInfo)">
+            <summary>
+            Used to allow a client to send touches and to connect its events up
+            </summary>
+            <param name="deviceId"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:Include.Input.DeregisterDevice(System.String)">
+            <summary>
+            Used remove a client when it disconnects
+            </summary>
+            <param name="deviceId"></param>
+            <param name="client"></param>
+        </member>
+        <member name="M:Include.Input.RegisterTouchable(UnityEngine.GameObject)">
+             <summary>
+             Use to register a touchable GameObject
+             
+            all touch objects registered after MAXIMUMID will be 0
+            this requires actually having 65400 active registered objects
+            the top 135 id's are reserved for overlays
+            
+             </summary>
+             <param name="gameObject"></param>
+             <returns>objectId associated with gameObject, 0 if it couldn't do so successfully</returns>
+        </member>
+        <member name="M:Include.Input.DeregisterTouchable(UnityEngine.GameObject)">
+            <summary>
+            Remove a formerly touchable object, making it untouchable
+            </summary>
+            <param name="gameObject"></param>
+        </member>
+        <member name="M:Include.Input.LateUpdate">
+            <summary>
+            used to indicate when a frame has ended, so we can clear up anything that needed to be frame dependent
+            </summary>
+        </member>
+        <member name="M:Include.Input.GetObjectId(UnityEngine.GameObject)">
+            <summary>
+            Gets the ObjectId of a gameObject if it's registered
+            </summary>
+            <param name="gameObject"></param>
+            <returns>ObjectId associated with gameObject, 0 if it can't find one</returns>
+        </member>
+        <member name="M:Include.Input.GetObject(System.Int32)">
+            <summary>
+            Gets the object associated with objectId
+            </summary>
+            <param name="objectId"></param>
+            <returns>GameObject associated with objectId, null if it can't find one</returns>
+        </member>
+    </members>
+</doc>
