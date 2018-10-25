@@ -9,6 +9,7 @@ public class PostFX : MonoBehaviour
 
     public void Start()
     {
+        
     }
 
     // Will be called from camera after regular rendering is done.
