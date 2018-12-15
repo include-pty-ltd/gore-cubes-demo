@@ -10,7 +10,7 @@ namespace Include.UnityScript
 
         private void Start()
         {
-            ViewerInterface.OnDeviceConnected.AddListener(OnClientConnected);
+            ViewRInterface.OnDeviceConnected.AddListener(OnClientConnected);
         }
 
         private void OnClientConnected(DeviceInfo clientId, GameObject client)

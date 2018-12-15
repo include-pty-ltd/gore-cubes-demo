@@ -11,7 +11,7 @@ namespace Include.UnityScript
         // Use this for initialization
         void Start()
         {
-            ViewerInterface.OnDeviceConnected.AddListener(OnClientConnected);
+            ViewRInterface.OnDeviceConnected.AddListener(OnClientConnected);
         }
 
         void OnClientConnected(DeviceInfo info, GameObject client)

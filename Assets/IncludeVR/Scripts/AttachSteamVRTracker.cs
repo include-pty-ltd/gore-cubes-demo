@@ -1,4 +1,4 @@
-﻿using Include.VR.Viewer.Networking;
+﻿using Include.VR.ViewR.Networking;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace Include.UnityScript
         Type SteamVRTracker = null;
         private void Start()
         {
-            ViewerInterface.OnDeviceConnected.AddListener(OnConnect);
+            ViewRInterface.OnDeviceConnected.AddListener(OnConnect);
         
             foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
             {
@@ -50,14 +50,13 @@ namespace Include.UnityScript
                 if(tracker == null) Logger.Log("AttachSteamVRTracker.OnConnect: tracker was null");
                 FieldInfo field = SteamVRTracker.GetField("origin");
                 if (field == null) Logger.Log("AttachSteamVRTracker.OnConnect: field was null");
-                if(ViewerInterface.GetInstance() == null) return;
-                field.SetValue(tracker, ViewerInterface.GetInstance().Origin);
+                if(ViewRInterface.GetInstance() == null) return;
+                field.SetValue(tracker, ViewRInterface.GetInstance().Origin);
 
                 CycleSteamVRTrackers cycler = client.AddComponent<CycleSteamVRTrackers>();
                 cycler.setIndex = SteamVRTracker.GetMethod("SetDeviceIndex");
                 Logger.Log("SteamVR entry points found.");
                 cycler.tracker = tracker;
-                cycler.deviceId = info.DeviceId;
                 Logger.Log("AttachSteamVRTracker.OnConnect: finished attaching steam vr tracker to camera");
 
                 UpdateSteamVROrigin posUpdater = client.AddComponent<UpdateSteamVROrigin>();

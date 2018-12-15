@@ -1,4 +1,4 @@
-﻿Shader "Unlit/ObjectIDRenderer"
+﻿Shader "Include/ObjectIDShader"
 {
 	Properties
 	{

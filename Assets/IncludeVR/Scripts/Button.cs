@@ -11,7 +11,7 @@ namespace Include.UnityScript
         DeviceInfo info;
         string deviceId;
         new Camera camera;
-        ViewerCameraController controller;
+        ViewRCameraController controller;
         
 
         // Use this for initialization
@@ -23,13 +23,13 @@ namespace Include.UnityScript
 
             Input.RegisterTouchable(gameObject);
 
-            controller = info.GetComponentInChildren<ViewerCameraController>();
+            controller = info.GetComponentInChildren<ViewRCameraController>();
             controller.OnStartCamera.AddListener(OnStartStream);
         }
 
-        void OnStartStream(ViewerDataType type, Camera camera)
+        void OnStartStream(ViewRDataType type, Camera camera)
         {
-            if (type == ViewerDataType.Scene)
+            if (type == ViewRDataType.Scene)
                 this.camera = camera;
         }
 

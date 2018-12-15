@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Include;
-using Include.VR.Viewer.Networking;
-using Include.VR.Viewer.Networking.Messages;
+using Include.VR.ViewR.Networking;
+using Include.VR.ViewR.Networking.Messages;
 
 
 // this is an example on how to turn device capabilities on and off from unity
@@ -73,57 +73,57 @@ namespace Include.UnityScript
             if (MotionSensors != currentMotionSensors && c.IsCapableOf(Capability.MotionSensors))
             {
                 currentMotionSensors = MotionSensors;
-                ViewerInterface.RequestCapability(info.DeviceId, Capability.MotionSensors, MotionSensors, PrintResponse);
+                ViewRInterface.RequestCapability(info.DeviceId, Capability.MotionSensors, MotionSensors, PrintResponse);
             }
             if (InternalTracking != currentInternalTracking && c.IsCapableOf(Capability.InternalTracking))
             {
                 currentInternalTracking = InternalTracking;
-                ViewerInterface.RequestCapability(info.DeviceId, Capability.InternalTracking, InternalTracking, PrintResponse);
+                ViewRInterface.RequestCapability(info.DeviceId, Capability.InternalTracking, InternalTracking, PrintResponse);
             }
             if (ExternalTracking != currentExternalTracking && c.IsCapableOf(Capability.ExternalTracking))
             {
                 currentExternalTracking = ExternalTracking;
-                ViewerInterface.RequestCapability(info.DeviceId, Capability.ExternalTracking, ExternalTracking, PrintResponse);
+                ViewRInterface.RequestCapability(info.DeviceId, Capability.ExternalTracking, ExternalTracking, PrintResponse);
             }
             if (FrontCamera != currentFrontCamera && c.IsCapableOf(Capability.FrontCamera))
             {
                 currentFrontCamera = FrontCamera;
-                ViewerInterface.RequestCapability(info.DeviceId, Capability.FrontCamera, FrontCamera, PrintResponse);
+                ViewRInterface.RequestCapability(info.DeviceId, Capability.FrontCamera, FrontCamera, PrintResponse);
             }
             if (BackCamera != currentBackCamera && c.IsCapableOf(Capability.BackCamera))
             {
                 currentBackCamera = BackCamera;
-                ViewerInterface.RequestCapability(info.DeviceId, Capability.BackCamera, BackCamera, PrintResponse);
+                ViewRInterface.RequestCapability(info.DeviceId, Capability.BackCamera, BackCamera, PrintResponse);
             }
             if (ExternalCamera != currentExternalCamera && c.IsCapableOf(Capability.ExternalCamera))
             {
                 currentExternalCamera = ExternalCamera;
-                ViewerInterface.RequestCapability(info.DeviceId, Capability.ExternalCamera, ExternalCamera, PrintResponse);
+                ViewRInterface.RequestCapability(info.DeviceId, Capability.ExternalCamera, ExternalCamera, PrintResponse);
             }
             if (Vibration != currentVibration && c.IsCapableOf(Capability.Vibration))
             {
                 currentVibration = Vibration;
-                ViewerInterface.RequestCapability(info.DeviceId, Capability.Vibration, Vibration, PrintResponse);
+                ViewRInterface.RequestCapability(info.DeviceId, Capability.Vibration, Vibration, PrintResponse);
             }
             if (Microphone != currentMicrophone && c.IsCapableOf(Capability.Microphone))
             {
                 currentMicrophone = Microphone;
-                ViewerInterface.RequestCapability(info.DeviceId, Capability.Microphone, Microphone, PrintResponse);
+                ViewRInterface.RequestCapability(info.DeviceId, Capability.Microphone, Microphone, PrintResponse);
             }
             if (Speaker != currentSpeaker && c.IsCapableOf(Capability.Speaker))
             {
                 currentSpeaker = Speaker;
-                ViewerInterface.RequestCapability(info.DeviceId, Capability.Speaker, Speaker, PrintResponse);
+                ViewRInterface.RequestCapability(info.DeviceId, Capability.Speaker, Speaker, PrintResponse);
             }
             if (Keyboard != currentKeyboard && c.IsCapableOf(Capability.Keyboard))
             {
                 currentKeyboard = Keyboard;
-                ViewerInterface.RequestCapability(info.DeviceId, Capability.Keyboard, Keyboard, PrintResponse);
+                ViewRInterface.RequestCapability(info.DeviceId, Capability.Keyboard, Keyboard, PrintResponse);
             }
             if (TouchScreen != currentTouchScreen && c.IsCapableOf(Capability.TouchScreen))
             {
                 currentTouchScreen = TouchScreen;
-                ViewerInterface.RequestCapability(info.DeviceId, Capability.TouchScreen, TouchScreen, PrintResponse);
+                ViewRInterface.RequestCapability(info.DeviceId, Capability.TouchScreen, TouchScreen, PrintResponse);
             }
         }
 

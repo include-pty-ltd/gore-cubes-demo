@@ -36,12 +36,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4406271644217498}
-  - component: {fileID: 114379353011150170}
-  - component: {fileID: 114260345059465352}
-  - component: {fileID: 114674457492372968}
-  - component: {fileID: 114620005398898746}
-  - component: {fileID: 114743673768881166}
-  - component: {fileID: 114706239373905872}
+  - component: {fileID: 114894821335319328}
+  - component: {fileID: 114446157611224318}
+  - component: {fileID: 114955794302978238}
+  - component: {fileID: 114121478582247078}
+  - component: {fileID: 114648696363718922}
+  - component: {fileID: 114737614129542994}
+  - component: {fileID: 114127586276872356}
   m_Layer: 0
   m_Name: Listeners
   m_TagString: Untagged
@@ -84,14 +85,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1521545215541746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 424511444, guid: 709c650b7cabd494da48237a73651361, type: 3}
+  m_Script: {fileID: 1917100857, guid: 709c650b7cabd494da48237a73651361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Description: 'This component manages incoming ViewR devices.
+
+    Use this to manage positions of the devices if you''re using position tracking.
+
+
+    On device connection, ViewR Interface will spawn a new GameObject with at minimum
+    DeviceInfo attached. Device info contains information about the connected client.'
   _Target: {fileID: 0}
   _Origin: {fileID: 0}
   DataPort: 42424
   DeviceObject: {fileID: 0}
---- !u!114 &114260345059465352
+--- !u!114 &114121478582247078
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -99,70 +107,70 @@ MonoBehaviour:
   m_GameObject: {fileID: 1649479209545000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1734941827, guid: e5c15f99994d65e4eab2b6a1366479dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114379353011150170
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649479209545000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -579533310, guid: e5c15f99994d65e4eab2b6a1366479dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraObject: {fileID: 1915442728870690, guid: f948655426653ca449d15557b1caa2c7,
-    type: 2}
-  canvasObjects: []
---- !u!114 &114620005398898746
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649479209545000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 83921903, guid: e5c15f99994d65e4eab2b6a1366479dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114674457492372968
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649479209545000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1077933452, guid: e5c15f99994d65e4eab2b6a1366479dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 989714fe639b3ec4881c8c36e1014ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   xSensitivity: 0.5
   ySensitivity: -0.5
   movementSpeed: 0.05
---- !u!114 &114706239373905872
+--- !u!114 &114127586276872356
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1649479209545000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -269507456, guid: e5c15f99994d65e4eab2b6a1366479dc, type: 3}
+  m_Script: {fileID: 11500000, guid: cbb8f49723ffe6b438f834d02f2d0064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114743673768881166
+--- !u!114 &114446157611224318
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1649479209545000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1344710859, guid: e5c15f99994d65e4eab2b6a1366479dc, type: 3}
+  m_Script: {fileID: 11500000, guid: f72b9a71238a9de4a8b4e54ec184a598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114648696363718922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1649479209545000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49bf06d31539f6a47a5511f27aa370a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114737614129542994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1649479209545000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6fa7908063d3c4e89863cec32877de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114894821335319328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1649479209545000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe2a258d120ced4bbcd55e6a79d8d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraObject: {fileID: 1915442728870690, guid: f948655426653ca449d15557b1caa2c7,
+    type: 2}
+  canvasObjects: []
 --- !u!114 &114910092689621978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,3 +182,18 @@ MonoBehaviour:
   m_Script: {fileID: 286235170, guid: 709c650b7cabd494da48237a73651361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Description: This component manages config settings managed by viewrcamera.cfg,
+    removing this will prevent settings controlled by that file from working.
+--- !u!114 &114955794302978238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1649479209545000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aab9537c28807242890fb5b9eaa97b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToAttach: {fileID: 1190025140563096, guid: b7c8ff2ac0002134ebfeab06082d5260,
+    type: 2}

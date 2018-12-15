@@ -11,29 +11,20 @@ namespace Include.UnityScript
     class CycleSteamVRTrackers : MonoBehaviour
     {
         private int index = 0;
-        private bool latch = false;
 
         public MethodInfo setIndex { get; set; }
-
         public Component tracker { get; set; }
-        public string deviceId { get; set; }
+        DeviceInfo info;
+
+        void Start()
+        {
+            info = GetComponent<DeviceInfo>();
+        }
 
         void Update()
         {
-            Touch touch = Input.GetTouches(deviceId, 0);
-            if (touch != null && !latch)
-            {
-                Debug.Log("start touch, current index is " + index);
-                latch = true;
-                index++;
-                index %= 16;
-                setIndex.Invoke(tracker, new object[] { index });
-                Debug.Log("end touch, current index is " + index);
-            }
-            else if (latch && touch == null)
-            {
-                latch = false;
-            }
+            if (index != info.trackerInt)
+                setIndex.Invoke(tracker, new object[] { info.trackerInt });
         }
     }
 }

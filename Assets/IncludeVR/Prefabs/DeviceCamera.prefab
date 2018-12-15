@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4588218512521136}
-  - component: {fileID: 114852273206039084}
+  - component: {fileID: 114651528437309494}
   m_Layer: 0
   m_Name: DeviceCamera
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114852273206039084
+--- !u!114 &114651528437309494
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,9 +48,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1915442728870690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -540519645, guid: 709c650b7cabd494da48237a73651361, type: 3}
+  m_Script: {fileID: -1401241743, guid: 709c650b7cabd494da48237a73651361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   record: 0
+  regenerateCameraOnSceneChange: 0
   useMainCamera: 0
   templateCamera: {fileID: 0}
+  cullingLayersToAdd: 
+  cullingLayersToRemove: 

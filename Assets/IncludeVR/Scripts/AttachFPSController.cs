@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Include;
-using Include.VR.Viewer.Networking;
+using Include.VR.ViewR.Networking;
 
 namespace Include.UnityScript
 {
@@ -18,7 +18,7 @@ namespace Include.UnityScript
 
         private void Start()
         {
-            ViewerInterface.OnDeviceConnected.AddListener(OnClientConnected);
+            ViewRInterface.OnDeviceConnected.AddListener(OnClientConnected);
         }
 
         void OnClientConnected(DeviceInfo info, GameObject client)

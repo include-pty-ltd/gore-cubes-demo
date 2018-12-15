@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Include;
-using Include.VR.Viewer.Networking;
+using Include.VR.ViewR.Networking;
 
 namespace Include.UnityScript
 {
@@ -11,7 +11,7 @@ namespace Include.UnityScript
         private void Start()
         {
             Logger.Log("AttachARCoreTracker.Start: Registering Listener");
-            ViewerInterface.OnDeviceConnected.AddListener(OnConnect);
+            ViewRInterface.OnDeviceConnected.AddListener(OnConnect);
         }
 
         void OnEnable()

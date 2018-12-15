@@ -9,7 +9,7 @@ namespace Include.UnityScript
         [SerializeField]
         private GameObject screen;
 
-        private ViewerCameraController controller = null;
+        private ViewRCameraController controller = null;
 
         //new DeviceCamera camera;
         private MeshRenderer r;
@@ -19,7 +19,7 @@ namespace Include.UnityScript
             DeviceInfo info = GetComponentInParent<DeviceInfo>();
             transform.localScale = new Vector3(info.ScreenHeight / 1000, info.ScreenWidth / 1000, 0.008f);
             transform.position = transform.position - Vector3.forward * 0.008f;
-            controller = info.GetComponentInChildren<ViewerCameraController>();
+            controller = info.GetComponentInChildren<ViewRCameraController>();
             if (controller != null)
             {
                 controller.OnStartCamera.AddListener(StartStream);
@@ -28,9 +28,9 @@ namespace Include.UnityScript
             r = screen.GetComponent<MeshRenderer>();
         }
 
-        void StartStream(ViewerDataType type, Camera camera)
+        void StartStream(ViewRDataType type, Camera camera)
         {
-            if (type == ViewerDataType.Scene)
+            if (type == ViewRDataType.Scene)
                 r.material.SetTexture("_MainTex", camera.targetTexture);
         }
 

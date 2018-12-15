@@ -17,7 +17,7 @@ namespace Include.UnityScript
 
         private void Start()
         {
-            ViewerInterface.OnDeviceConnected.AddListener(OnClientConnected);
+            ViewRInterface.OnDeviceConnected.AddListener(OnClientConnected);
         }
 
         void OnClientConnected(DeviceInfo info, GameObject client)
@@ -26,12 +26,12 @@ namespace Include.UnityScript
             cam.transform.parent = client.transform;
             cam.name = cameraObject.name;
 
-            ViewerCameraController controller = cam.GetComponent<ViewerCameraController>();
+            ViewRCameraController controller = cam.GetComponent<ViewRCameraController>();
 
             foreach (GameObject go in canvasObjects)
             {
                 GameObject c = Instantiate(go);
-                c.AddComponent<ViewerCanvas>().AttachListener(controller);
+                c.AddComponent<ViewRCanvas>().AttachListener(controller);
                 c.transform.parent = client.transform;
                 c.name = go.name;
             }

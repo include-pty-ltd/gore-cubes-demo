@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 
 namespace Include.UnityScript
 {
+    /// <summary>
+    /// Monobehaviour for updating origin of SteamVR tracked device. This uses relfection to prevent dependency on SteamVR.
+    /// </summary>
     class UpdateSteamVROrigin : MonoBehaviour
     {
         public FieldInfo field { get; set; }
@@ -21,8 +24,8 @@ namespace Include.UnityScript
         private void OnSceneChanged(Scene arg0, Scene arg1)
         {
             Console.WriteLine("Resetting origin for steamvr");
-            if(ViewerInterface.GetInstance() != null)
-                field.SetValue(tracker, ViewerInterface.GetInstance().Origin);
+            if (ViewRInterface.GetInstance() != null)
+                field.SetValue(tracker, ViewRInterface.GetInstance().Origin);
         }
     }
 }

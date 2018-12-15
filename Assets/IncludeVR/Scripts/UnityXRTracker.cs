@@ -11,32 +11,15 @@ namespace Include.UnityScript
     {
         Transform t;
         int index = 0;
-        bool latch = false;
+        List<XRNodeState> states = new List<XRNodeState>();
+        DeviceInfo info;
 
         public string deviceId { get; set; }
 
         void Start()
         {
+            info = GetComponent<DeviceInfo>();
             t = transform;
-
-            List<XRNodeState> states = new List<XRNodeState>();
-            InputTracking.GetNodeStates(states);
-
-            bool set = false;
-            foreach (XRNodeState state in states)
-            {
-                index++;
-                if (state.nodeType == XRNode.HardwareTracker)
-                {
-                    set = true;
-                    break;
-                }
-            }
-            if (!set)
-            {
-                index = 3;
-            }
-
         }
 
         void Update()
@@ -44,24 +27,9 @@ namespace Include.UnityScript
             List<XRNodeState> states = new List<XRNodeState>();
             InputTracking.GetNodeStates(states);
             //Console.WriteLine("we have " + states.Count + " nodes");
-            DetectTouch(states.Count);
-            SetPose(states);
-        }
+            index = info.trackerInt;
 
-        void DetectTouch(int numberOfStates)
-        {
-            Touch touch = Input.GetTouches(deviceId, 0);
-            if (touch != null && !latch)
-            {
-                latch = true;
-                index++;
-                index %= numberOfStates;
-                Console.WriteLine("end touch, current index is " + index);
-            }
-            else if (latch && touch == null)
-            {
-                latch = false;
-            }
+            SetPose(states);
         }
 
         void SetPose(List<XRNodeState> states)
