@@ -32,7 +32,7 @@ namespace Include.UnityScript
                     Input.OriginRotation * pose.rotation : Quaternion.Slerp(t.rotation, Input.OriginRotation * trackerRotation, Time.unscaledDeltaTime * Config.rotlerp));
 
                     trackerPosition = (Config.poslerp == 0 ?
-                    Input.OriginRotation * trackerPosition : Vector3.Lerp(t.position, Input.OriginRotation * trackerPosition, Time.unscaledDeltaTime * Config.poslerp));
+                    Input.OriginPosition + Input.OriginRotation * trackerPosition : Vector3.Lerp(t.position, Input.OriginPosition + Input.OriginRotation * trackerPosition, Time.unscaledDeltaTime * Config.poslerp));
 
                     for (int i = 0; i < 3; i++)
                     {
@@ -49,11 +49,7 @@ namespace Include.UnityScript
                     trackerPosition = (Config.poslerp == 0 ?
                     trackerPosition : Vector3.Lerp(t.localPosition, trackerPosition, Time.unscaledDeltaTime * Config.poslerp));
 
-                    for(int i = 0; i < 3; i++)
-                    {
-                        trackerPosition[i] *= t.localScale[i];
-                    }
-
+                    for(int i = 0; i < 3; i++) trackerPosition[i] *= t.localScale[i];
                     t.localPosition = trackerPosition;
                 }
             }

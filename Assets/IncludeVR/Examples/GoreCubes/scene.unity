@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &88653920
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &525615566
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &594135983
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &700863542
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &779650262
@@ -849,7 +849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &779654603
@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &1041704412
@@ -1462,7 +1462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &1134629795
@@ -1744,7 +1744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!1 &1241238325
@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &1241238328
@@ -2046,7 +2046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &1410652279
@@ -2163,7 +2163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &1411607957
@@ -2364,7 +2364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &1553953740
@@ -2481,7 +2481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &1635269515
@@ -2832,7 +2832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gore: {fileID: 1152654929179750, guid: 1c7d95aa1e44f8f4285ab03fdaf181b4, type: 2}
   amountOfGore: 5
-  explosionForce: 100
+  explosionForce: 200
   leftHand: {fileID: 1651729612}
   rightHand: {fileID: 137878997}
 --- !u!54 &1836184428

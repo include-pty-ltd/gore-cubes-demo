@@ -32,21 +32,15 @@ public class Explodable : MonoBehaviour
         {
             Explode(new Color(0xB2, 0x00, 0x00));
         }
-
-        if (UnityEngine.Input.GetAxis("Left Trigger") > 0.5f && !exploded)
+        Debug.Log(UnityEngine.Input.GetAxis("Left Trigger") + " " + UnityEngine.Input.GetAxis("Right Trigger"));
+        if (UnityEngine.Input.GetAxis("Left Trigger") > 0.5f && !exploded && leftHand.bounds.Intersects(collider.bounds))
         {
-            if (leftHand.bounds.Intersects(collider.bounds))
-            {
-                Explode(new Color(0x00, 0x00, 0xB2));
-            }
+            Explode(new Color(0x00, 0x00, 0xB2));
         }
 
-        if (UnityEngine.Input.GetAxis("Right Trigger") > 0.5f && !exploded)
+        if (UnityEngine.Input.GetAxis("Right Trigger") > 0.5f && !exploded && rightHand.bounds.Intersects(collider.bounds))
         {
-            if (rightHand.bounds.Intersects(collider.bounds))
-            {
-                Explode(new Color(0x00, 0xB2, 0x00));
-            }
+            Explode(new Color(0x00, 0xB2, 0x00));
         }
     }
 

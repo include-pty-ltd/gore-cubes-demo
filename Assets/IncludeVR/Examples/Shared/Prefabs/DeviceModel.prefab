@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33226474189094796}
   - component: {fileID: 65751591231190352}
   - component: {fileID: 23540108320766262}
-  - component: {fileID: 114203618946530112}
+  - component: {fileID: 114760010606908882}
   m_Layer: 0
   m_Name: DeviceModel
   m_TagString: Untagged
@@ -270,7 +270,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114203618946530112
+--- !u!114 &114760010606908882
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1190025140563096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 395780741, guid: e5c15f99994d65e4eab2b6a1366479dc, type: 3}
+  m_Script: {fileID: 11500000, guid: c3310c5951168ed4ea644f8e3aa1e908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   screen: {fileID: 1389327432933506}

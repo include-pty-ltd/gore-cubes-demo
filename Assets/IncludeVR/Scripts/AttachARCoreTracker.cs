@@ -29,7 +29,7 @@ namespace Include.UnityScript
                 ARCoreTracker tracker = client.AddComponent<ARCoreTracker>();
                 if(tracker == null)
                 {
-                    Logger.Log("AttachARCoreTracker.OnConnect: why the fuck is this null?");
+                    Logger.Log("AttachARCoreTracker.OnConnect: why the hell is this null?");
                 } else
                 {
                     Logger.Log("AttachARCoreTracker.OnConnect: tracker attached");
